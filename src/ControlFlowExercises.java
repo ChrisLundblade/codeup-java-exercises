@@ -43,32 +43,35 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
         //2
-        for (int i = 1; i <= 100; i++){
-            if (i%3==0 && i%5==0){
-                System.out.println("FizzBuzz");
-            } else if(i%3==0){
-                System.out.println("Fizz");
-            } else if(i%5==0){
-                System.out.println("Buzz");
-            } else {
-                System.out.println(i);
-            }
-        }
-        //3
-//        System.out.println("What number would you like to go up to?");
-//        int userInputNumber = Integer.parseInt(scanner.nextLine());
-//        System.out.println("\nHere is your table! \n");
-//        System.out.println("number | squared | cubed");
-//        System.out.println("------ | ------- | -----");
-//        for (int i =1; i <= userInputNumber; i++){
-//
-//            if(Math.pow(i,2)%10 == i){
-//                System.out.print(i + "      | ");
-//                System.out.print(Math.pow(i,2) + "      | " + Math.pow(i,3) + "\n");
+//        for (int i = 1; i <= 100; i++){
+//            if (i%3==0 && i%5==0){
+//                System.out.println("FizzBuzz");
+//            } else if(i%3==0){
+//                System.out.println("Fizz");
+//            } else if(i%5==0){
+//                System.out.println("Buzz");
 //            } else {
-//                System.out.print(i + "      | ");
-//                System.out.print(Math.pow(i,2) + "     | " + Math.pow(i,3) + "\n");
+//                System.out.println(i);
 //            }
 //        }
+        //3    Okay so this will output just like the original if you input an integer less than 10
+        System.out.println("What number would you like to go up to?");
+        int userInputNumber = Integer.parseInt(scanner.nextLine());
+        System.out.println("\nHere is your table! \n");
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------- | -----");
+        for (int i =1; i <= userInputNumber; i++){
+
+            if((i*i)< 10){
+                System.out.print(i + "      | ");
+                System.out.print((i*i) + "       | " + (i*i*i) + "\n");
+            } else {
+                System.out.print(i + "      | ");
+                System.out.print((i * i) + "      | " + (i*i*i) + "\n");
+            }
+        }
+
+       //4
+
     }
 }
