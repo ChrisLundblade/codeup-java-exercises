@@ -68,7 +68,7 @@ public class HelloWorld {
 //        int three = (int) "three"; //Inconvertible type
 
 //        What are the two different types of errors we are observing? Casting objects to int is evidently allowed but the string inside it still can't be type int
-//          The former error did not prevent the code from being run but did throw an error as it compiled. The latter will prevent compilation up front
+//          The former error was a class cast exception. The latter
 //
 //                Rewrite the following expressions using the relevant shorthand assignment operators:
 //
