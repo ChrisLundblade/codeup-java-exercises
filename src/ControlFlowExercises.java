@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -55,23 +56,60 @@ public class ControlFlowExercises {
 //            }
 //        }
         //3    Okay so this will output just like the original if you input an integer less than 10
-        System.out.println("What number would you like to go up to?");
-        int userInputNumber = Integer.parseInt(scanner.nextLine());
-        System.out.println("\nHere is your table! \n");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        for (int i =1; i <= userInputNumber; i++){
-
-            if((i*i)< 10){
-                System.out.print(i + "      | ");
-                System.out.print((i*i) + "       | " + (i*i*i) + "\n");
-            } else {
-                System.out.print(i + "      | ");
-                System.out.print((i * i) + "      | " + (i*i*i) + "\n");
-            }
-        }
+//        System.out.println("What number would you like to go up to?");
+//        int userInputNumber = Integer.parseInt(scanner.nextLine());
+//        System.out.println("\nHere is your table! \n");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//        for (int i =1; i <= userInputNumber; i++){
+//
+//            if((i*i)< 10){
+//                System.out.print(i + "      | ");
+//                System.out.print((i*i) + "       | " + (i*i*i) + "\n");
+//            } else {
+//                System.out.print(i + "      | ");
+//                System.out.print((i * i) + "      | " + (i*i*i) + "\n");
+//            }
+//        }
 
        //4
+        while (true) {
+            System.out.println("Give us a numerical integer grade 0 to 100 in the console");
+            int userGrade = Integer.parseInt(scanner.nextLine());
+            if(userGrade > 98){
+                System.out.println("That's an A+");
+            } else if (userGrade > 92) {
+                System.out.println("That's an A");
+            } else if (userGrade > 89){
+                System.out.println("That's an A-");
+            } else if(userGrade > 87){
+                System.out.println("That's a B+");
+            } else if(userGrade > 82){
+                System.out.println("That's a B");
+            } else if(userGrade > 79){
+                System.out.println("That's a B-");
+            } else if(userGrade > 77){
+                System.out.println("That's a C+");
+            } else if(userGrade > 72){
+                System.out.println("That's a C");
+            } else if(userGrade > 69){
+                System.out.println("That's a C-");
+            } else if(userGrade > 67){
+                System.out.println("That's a D+");
+            } else if(userGrade > 62){
+                System.out.println("That's a D");
+            } else if(userGrade > 59){
+                System.out.println("That's a D-");
+            } else {
+                System.out.println("That's an F");
+            }
 
+            System.out.println("Continue getting grades? (Y/N)");
+            String userDecision = scanner.nextLine();
+            System.out.println(userDecision);
+            if(userDecision.equals("N")){
+                break;
+            }
+        }
     }
 }
