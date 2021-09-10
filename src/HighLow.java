@@ -24,9 +24,17 @@ public class HighLow {
                 }
             } else if(userGuess > theNumber){
                 totalUserGuesses++;
+                if(totalUserGuesses == 10){
+                    System.out.println("You made to many incorrect guesses. You lose.");
+                    break;
+                }
                 System.out.println("LOWER.");
             } else {
                 totalUserGuesses++;
+                if(totalUserGuesses == 10){
+                    System.out.println("You made to many incorrect guesses. You lose.");
+                    break;
+                }
                 System.out.println("HIGHER.");
             }
         }
