@@ -10,13 +10,18 @@ public class CircleApp {
         System.out.println("My circle has an area of " + myCircle.getArea() + " square meters.");
         System.out.println("My circle has a circumference of " + myCircle.getCircumference() + " meters.");
 
-//        System.out.println("Keep making circles?");
-//        boolean keepMakingCircles = input.yesNo();
+
+//        boolean keepMakingCircles = true;
 //        while (keepMakingCircles){
-//
-//
 //            System.out.println("Keep making circles?");
-//            keepMakingCircles= input.yesNo();
+//            keepMakingCircles = input.yesNo();
+//            if(keepMakingCircles){
+//                System.out.println("What is the radius of the circle in meters?");
+//                radius = input.getDouble(0, (double) Integer.MAX_VALUE);
+//                Circle myCircle = new Circle(radius);
+//                System.out.println("My circle has an area of " + myCircle.getArea() + " square meters.");
+//                System.out.println("My circle has a circumference of " + myCircle.getCircumference() + " meters.");
+//            }
 //        }
     }
 }
