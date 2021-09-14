@@ -23,7 +23,9 @@ public class ArraysExercises {
 //        System.out.println(numbers);
 //        Create an array that holds 3 Person objects. Assign a new instance of the Person class to each element. Iterate through the array and print out the name of each person in the array.
 
-        Person[] personArray = {new Person("Jeff"),new Person("Joni"),new Person("Iosif")};
+        Person[] personArray = {new Person("Jeff"),
+                new Person("Joni"),
+                new Person("Iosif")};
 
         ArraysExercises.printNames(personArray);
 
