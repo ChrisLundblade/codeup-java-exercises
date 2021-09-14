@@ -1,5 +1,5 @@
 public class Person {
-    public String name;
+    private String name;
 
     public String getName(){
 //TODO: return the person's name

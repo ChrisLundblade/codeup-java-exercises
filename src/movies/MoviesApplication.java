@@ -62,12 +62,6 @@ public class MoviesApplication {
                     break;
                 case (7):
                     Movie.soutMoviesByGenre("musical");
-//                    for (Movie movie : MoviesArray.findAll()){
-//                        if(movie.getCategory().equals("scifi")){
-//                            System.out.println(movie.getName() + " - " + movie.getCategory());
-//                        }
-//                    }
-//                    System.out.println("----END LIST----\n");
                     break;
             }
         }

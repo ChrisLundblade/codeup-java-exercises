@@ -11,7 +11,7 @@ public class ArraysExercises {
 
     public static void printNames (Person[] inputArr){
         for (Person person : inputArr){
-            System.out.println(person.name);
+            System.out.println(person.getName());
         }
     }
 
