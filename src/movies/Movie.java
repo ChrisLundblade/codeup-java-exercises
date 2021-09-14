@@ -24,4 +24,13 @@ public class Movie {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    public static void soutMoviesByGenre(String category){
+        for (Movie movie : MoviesArray.findAll()){
+            if(movie.getCategory().equals(category)){
+                System.out.println(movie.getName() + " - " + movie.getCategory());
+            }
+        }
+        System.out.println("----END LIST----\n");
+    }
 }

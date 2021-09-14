@@ -29,6 +29,5 @@ public class ArraysExercises {
 
         ArraysExercises.printNames(addPerson(personArray, new Person("Alyosha")));
 
-
     }
 }
