@@ -1,7 +1,7 @@
 package vehicle;
 
 public class Vehicle {
-    private String name;
+    protected String name;
 
     public String getName() {
         return name;
@@ -22,6 +22,9 @@ public class Vehicle {
 
     public Vehicle(String name){
         this.name = name;
+    }
+
+    public Vehicle(){
     }
 
     public void makeNoise(){

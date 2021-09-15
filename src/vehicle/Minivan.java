@@ -9,5 +9,13 @@ public class Minivan extends Vehicle{
         super(name);
 
     }
+    public Minivan(){
+        super("generic minivan");
+
+    }
+
+    public void setName(String minivanName){
+        this.name = minivanName;
+    }
 
 }

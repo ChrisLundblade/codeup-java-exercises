@@ -5,6 +5,10 @@ public class Truck extends Vehicle{
         super(name);
     }
 
+    public Truck(){
+        super("generic truck");
+    }
+
     public void makeNoise(){
         System.out.println("VRROOOOOooom");
     }
