@@ -5,7 +5,8 @@ public class Minivan extends Vehicle{
         System.out.println("HAAAAAAAAAAA... HAAAAAAAAAAAA");
     }
 
-    Minivan(){
+    public Minivan(String name){
+        super(name);
 
     }
 
