@@ -18,6 +18,10 @@ public class VehicleTest {
         newMinivan.setName("honda oddyssey");
         System.out.println(newMinivan.name);
 
+        SUV escalade = new SUV("cadillac escalade");
+        escalade.makeNoise();
+        //System.out.println(escalade.getName());
+
     }
 
 

@@ -2,15 +2,17 @@ package birds;
 
 public class BirdTest {
     public static void main(String[] args) {
-        Bird cardinal = new Bird();
+        Bird cardinal = new Bird("cardinal");
         cardinal.setName("cardinal");
 
         System.out.println(cardinal.getName() + " says:");
         cardinal.makeNoise();
         cardinal.move();
 
-        Duck mallard = new Duck();
-        mallard.setName("Mallard");
+        Duck mallard = new Duck("Mallard");
+        //mallard.setName("Mallard");
         mallard.makeNoise();
+
+
     }
 }
