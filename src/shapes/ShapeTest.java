@@ -14,11 +14,14 @@ public class ShapeTest {
         Measurable myShape = new Square(15);
         System.out.println("Myshape has an area of " + myShape.getArea() + " square units and a perimeter of " + myShape.getPerimeter());
 
+
+
         Measurable myShape2 = new Rectangle(15,10);
         System.out.println("Myshape2 has an area of " + myShape2.getArea() + " square units and a perimeter of " + myShape2.getPerimeter());
 
         Square mySquare = new Square(4);
         System.out.println("MySquare has an area of " + mySquare.getArea() + " square units and a perimeter of " + mySquare.getPerimeter());
+        mySquare.getLength();
 
         Rectangle myRectangle = new Rectangle(4,5);
         System.out.println("MyRectangle has an area of " + myRectangle.getArea() + " square units and a perimeter of " + myRectangle.getPerimeter());

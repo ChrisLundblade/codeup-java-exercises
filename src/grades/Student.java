@@ -28,11 +28,11 @@ public class Student {
     }
 
 
-//    public static void main(String[] args) {
-//        Student jeff = new Student("jeff");
-//        jeff.addGrade(25);
-//        jeff.addGrade(100);
-//        jeff.addGrade(45.79);
-//        System.out.println(jeff.getGradeAverage());
-//    }
+    public static void main(String[] args) {
+        Student jeff = new Student("jeff");
+        jeff.addGrade(25);
+        jeff.addGrade(100);
+        jeff.addGrade(45.79);
+        System.out.println(jeff.getGradeAverage());
+    }
 }
