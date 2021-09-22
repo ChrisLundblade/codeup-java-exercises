@@ -9,6 +9,11 @@ public class Input {
         String input = scanner.nextLine();
         return input;
     }
+    public String getString(String prompt){
+        System.out.println(prompt);
+        String input = scanner.nextLine();
+        return input;
+    }
 
     public boolean yesNo(){
         System.out.println("Input yes or no");
@@ -60,35 +65,79 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.println("Enter an integer between " + min + " and " + max + ".");
-        int userInput = Integer.parseInt(scanner.nextLine());
-        if (userInput > min && userInput < max){
-            return userInput;
-        } else {
+        //System.out.println("Enter an integer between " + min + " and " + max + ".");
+        try{
+            //works okay but invoking getString souts my prompt for a string which
+            //I would consider to be not very user friendly and quite confusing
+            int userInput = Integer.valueOf(getString("Enter an integer between " + min + " and " + max + "."));
+            if (userInput > min && userInput < max){
+                return userInput;
+            } else {
+                return this.getInt(min, max);
+            }
+        } catch (NumberFormatException nfe){
+            System.out.println("That wasn't even a number.");
+            System.out.println(nfe);
+            System.out.println("Try again");
             return this.getInt(min, max);
+        }
+
+    }
+
+//    public int getInt(){
+//        System.out.println("Enter an integer.");
+//        int userInput = Integer.parseInt(scanner.nextLine());
+//        return userInput;
+//    }
+    public int getInt(){
+        //System.out.println("Enter an integer.");
+        try{
+            int userInput = Integer.valueOf(getString("Enter an integer."));
+                return userInput;
+        } catch (NumberFormatException nfe){
+            System.out.println("That wasn't even a number.");
+            System.out.println(nfe);
+            System.out.println("Try again");
+            return this.getInt();
         }
     }
 
-    public int getInt(){
-        System.out.println("Enter an integer.");
-        int userInput = Integer.parseInt(scanner.nextLine());
-        return userInput;
-    }
-
+//    public double getDouble(double min, double max){
+//        System.out.println("Enter a double between " + min + " and " + max + ".");
+//        double userInput = Double.parseDouble(scanner.nextLine());
+//        if (userInput >= min && userInput <= max){
+//            return userInput;
+//        } else {
+//            return this.getDouble(min, max);
+//        }
+//    }
     public double getDouble(double min, double max){
-        System.out.println("Enter a double between " + min + " and " + max + ".");
-        double userInput = Double.parseDouble(scanner.nextLine());
-        if (userInput >= min && userInput <= max){
-            return userInput;
-        } else {
-            return this.getDouble(min, max);
+        //System.out.println("Enter a double between " + min + " and " + max + ".");
+        try{
+            double userInput = Double.valueOf(getString("Enter a double between " + min + " and " + max + "."));
+            if (userInput >= min && userInput <= max){
+                return userInput;
+            } else {
+                return this.getDouble(min, max);
+            }
+        }catch(NumberFormatException nfe){
+            System.out.println("That wasn't even a number.");
+            System.out.println(nfe);
+            System.out.println("Try again");
+            return(getDouble(min,max));
         }
     }
 
     public double getDouble(){
-        System.out.println("Enter a double.");
-        double userInput = Double.parseDouble(scanner.nextLine());
-        return userInput;
+        try{
+            double userInput = Double.valueOf(getString("Enter a double."));
+            return userInput;
+        }catch(NumberFormatException nfe){
+            System.out.println("That wasn't even a number.");
+            System.out.println(nfe);
+            System.out.println("Try again");
+            return(getDouble());
+        }
     }
 
     public Input(){
