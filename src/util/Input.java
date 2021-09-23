@@ -76,6 +76,7 @@ public class Input {
                 return this.getInt(min, max);
             }
         } catch (NumberFormatException nfe){
+            nfe.printStackTrace();
             System.out.println("That wasn't even a number.");
             System.out.println(nfe);
             System.out.println("Try again");
@@ -91,10 +92,12 @@ public class Input {
 //    }
     public int getInt(){
         //System.out.println("Enter an integer.");
+        int userInput;
         try{
-            int userInput = Integer.valueOf(getString("Enter an integer."));
+            userInput = Integer.valueOf(getString("Enter an integer."));
                 return userInput;
         } catch (NumberFormatException nfe){
+            nfe.printStackTrace();
             System.out.println("That wasn't even a number.");
             System.out.println(nfe);
             System.out.println("Try again");
@@ -121,6 +124,7 @@ public class Input {
                 return this.getDouble(min, max);
             }
         }catch(NumberFormatException nfe){
+            nfe.printStackTrace();
             System.out.println("That wasn't even a number.");
             System.out.println(nfe);
             System.out.println("Try again");
@@ -133,6 +137,7 @@ public class Input {
             double userInput = Double.valueOf(getString("Enter a double."));
             return userInput;
         }catch(NumberFormatException nfe){
+            nfe.printStackTrace();
             System.out.println("That wasn't even a number.");
             System.out.println(nfe);
             System.out.println("Try again");
