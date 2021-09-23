@@ -6,6 +6,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Iterator;
 
 public class FileIOPracticeTest {
 
@@ -55,6 +56,44 @@ public class FileIOPracticeTest {
         } catch (IOException ioe){
             ioe.printStackTrace();
         }
+        practice.readFileAndOutput(pathtoOurFile);
+
+
+        List<String> newHxCBands = new ArrayList<>();
+        newHxCBands.add("Kublai Khan");
+        newHxCBands.add("Harm's Way");
+        newHxCBands.add("Knocked Loose");
+
+        try{
+            Files.write(pathtoOurFile, newHxCBands, StandardOpenOption.APPEND);
+        } catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+
+        practice.readFileAndOutput(pathtoOurFile);
+
+        List<String> currentList = new ArrayList<>();
+        try{
+            currentList = Files.readAllLines(pathtoOurFile);
+        } catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+
+        Iterator<String> listIterator = currentList.iterator();
+        while(listIterator.hasNext()){
+            String item = listIterator.next();
+            if (item.equals("Comeback Kid")){
+                listIterator.remove();
+            }
+        }
+
+        try {
+            Files.write(pathtoOurFile, currentList);
+        } catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+
+
         practice.readFileAndOutput(pathtoOurFile);
     }
 }
