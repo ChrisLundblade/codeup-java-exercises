@@ -8,6 +8,11 @@ public class Comedy extends Movie {
             this.funny = funny;
     }
 
+    //override Implementation
+    public String audienceReaction(){
+        return ("oooohhh, " + this.getName() + " was so funny!");
+    }
+
     public boolean isFunny() {
         return funny;
     }

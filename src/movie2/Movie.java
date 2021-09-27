@@ -1,8 +1,13 @@
 package movie2;
 
-public class Movie {
+public class Movie implements Entertains{
     private String name;
     private String director;
+
+    //implementation
+    public String audienceReaction(){
+        return ("oooohhh, " + this.name + " was so awesome!");
+    }
 
     public Movie(String name, String director)throws IllegalArgumentException{
         if(name ==null || name.isBlank() || director == null || director.isBlank()){
